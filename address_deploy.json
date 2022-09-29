@@ -1,0 +1,10 @@
+{
+  "rinkeby": {
+    "LotteryToken": "0x1A6F0e78678720D99d86DCB28799D8201634bb56",
+    "Lottery": "0x6649e6e67002D057F8dE94da091c032774b4e294"
+  },
+  "matic-testnet": {
+    "LotteryToken": "0x5f1695cecB9Bb33adf8F050Ff3393db17E8aE3c0",
+    "Lottery": "0xf56431f15826cB403C6283775Ba30624dfEeFf5B"
+  }
+}
