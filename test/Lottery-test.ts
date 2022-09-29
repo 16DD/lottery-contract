@@ -31,7 +31,7 @@ describe("Lottery game", async () => {
 		await lotteryErc20.connect(owner).pickWinnerAndAwarding();
 		//--check
 		const result = await lotteryErc20.gameResult();
-		result._winNumber == 32 ? expect(await lotteryToken.balanceOf(user.address)).to.eq(parseEther("99")) : expect(await lotteryToken.balanceOf(owner.address)).to.eq(parseEther("1000010"));
+		result._luckyNumber == 32 ? expect(await lotteryToken.balanceOf(user.address)).to.eq(parseEther("99")) : expect(await lotteryToken.balanceOf(owner.address)).to.eq(parseEther("1000010"));
 		
 		// feePlay = 10
 		// if win => winer = 9 owner = 1 
@@ -52,7 +52,7 @@ describe("Lottery game", async () => {
 		const result = await lotteryNative.gameResult();
 		const balanceOwner = await owner.getBalance();
 
-		result._winNumber == 32 ? expect(balanceOwner.gt(BigNumber.from("10009"))).to.eq(true) : expect(balanceOwner.gt(BigNumber.from("100099"))).to.eq(true);
+		result._luckyNumber == 32 ? expect(balanceOwner.gt(BigNumber.from("10009"))).to.eq(true) : expect(balanceOwner.gt(BigNumber.from("100099"))).to.eq(true);
 
 		// feePlay = 100
 		// if win => winer = 10090 owner = 10010  (not counted gas fee)
